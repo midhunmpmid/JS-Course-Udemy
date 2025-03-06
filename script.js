@@ -15,3 +15,6 @@
 // console.log(drink);
 
 // console.log(`I like to drink ${age >= 18 ? "Wine..🍷" : "Water..💧"}`);
+
+// use scrict mode to avoid common errors
+// 'use strict';
