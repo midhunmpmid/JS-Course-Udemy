@@ -30,8 +30,27 @@
 
 //CHALLENGE 4
 
-const bill = 275;
-const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
-console.log(
-  `The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`
-);
+// const bill = 275;
+// const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// console.log(
+//   `The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`
+// );
+
+//CHALLENGE 5
+
+const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
+
+const scoreDolphins = calcAverage(44, 23, 71);
+const scoreKoalas = calcAverage(65, 54, 49);
+
+function checkWinner(avgDolphins, avgKoalas) {
+  if (avgDolphins >= 2 * avgKoalas) {
+    return console.log(`Dolphins win (${avgDolphins} vs ${avgKoalas})`);
+  } else if (avgKoalas >= 2 * avgDolphins) {
+    return console.log(`Koalas win (${avgKoalas} vs ${avgDolphins})`);
+  } else {
+    return console.log("No tean wins...");
+  }
+}
+
+checkWinner(scoreDolphins, scoreKoalas);
