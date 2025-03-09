@@ -41,3 +41,11 @@
 //   return `${firstname} retires in ${retirement} years`;
 // };
 // console.log(yearUntilRetirement(1995, "Bob"));
+
+// const friends = ["a", "b", "c"];
+// console.log(friends);
+// console.log(friends.length);
+
+// friends.push("d");
+// console.log(friends);
+// console.log(friends.length);

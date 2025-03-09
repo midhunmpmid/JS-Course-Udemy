@@ -38,19 +38,29 @@
 
 //CHALLENGE 5
 
-const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
+// const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
 
-const scoreDolphins = calcAverage(44, 23, 71);
-const scoreKoalas = calcAverage(65, 54, 49);
+// const scoreDolphins = calcAverage(44, 23, 71);
+// const scoreKoalas = calcAverage(65, 54, 49);
 
-function checkWinner(avgDolphins, avgKoalas) {
-  if (avgDolphins >= 2 * avgKoalas) {
-    return console.log(`Dolphins win (${avgDolphins} vs ${avgKoalas})`);
-  } else if (avgKoalas >= 2 * avgDolphins) {
-    return console.log(`Koalas win (${avgKoalas} vs ${avgDolphins})`);
-  } else {
-    return console.log("No tean wins...");
-  }
-}
+// function checkWinner(avgDolphins, avgKoalas) {
+//   if (avgDolphins >= 2 * avgKoalas) {
+//     return console.log(`Dolphins win (${avgDolphins} vs ${avgKoalas})`);
+//   } else if (avgKoalas >= 2 * avgDolphins) {
+//     return console.log(`Koalas win (${avgKoalas} vs ${avgDolphins})`);
+//   } else {
+//     return console.log("No team wins...");
+//   }
+// }
+// checkWinner(scoreDolphins, scoreKoalas);
 
-checkWinner(scoreDolphins, scoreKoalas);
+//CHALLENGE 6
+
+const calcTip = (billValue) =>
+  billValue >= 50 && billValue <= 300 ? billValue * 0.15 : billValue * 0.2;
+
+const bills = [125, 555, 44];
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+
+console.log(bills, tips, totals);
