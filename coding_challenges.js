@@ -120,20 +120,35 @@
 
 //CHALLENGE 9
 
-const temps = [9, 7, 5, 3, 6, "error", 9, 10, 13];
+// const temps = [9, 7, 5, 3, 6, "error", 9, 10, 13];
 
-const calcTempAmplitude = function (temps) {
-  let max = temps[0];
-  let min = temps[0];
+// const calcTempAmplitude = function (temps) {
+//   let max = temps[0];
+//   let min = temps[0];
 
-  for (let i = 0; i < temps.length; i++) {
-    if (typeof temps[i] !== "number") continue;
-    if (temps[i] > max) max = temps[i];
-    if (temps[i] < min) min = temps[i];
+//   for (let i = 0; i < temps.length; i++) {
+//     if (typeof temps[i] !== "number") continue;
+//     if (temps[i] > max) max = temps[i];
+//     if (temps[i] < min) min = temps[i];
+//   }
+//   console.log(min, max);
+//   return max - min;
+// };
+
+// const amplitude = calcTempAmplitude(temps);
+// console.log(amplitude);
+
+//CHALLENGE 9
+
+const arr = [14, 21, 30];
+
+const printForcast = function (arr) {
+  let str = "";
+  for (let i = 0; i < arr.length; i++) {
+    str = str + `... ${arr[i]}°C in ${i + 1} days `;
   }
-  console.log(min, max);
-  return max - min;
+  str = str + "...";
+  console.log(str);
 };
 
-const amplitude = calcTempAmplitude(temps);
-console.log(amplitude);
+printForcast(arr);
