@@ -103,17 +103,37 @@
 
 //CHALLENGE 8
 
-const calcTip = function (bill) {
-  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// const calcTip = function (bill) {
+//   return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// };
+
+// const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+// const tips = [];
+// const totals = [];
+
+// for (let i = 0; i < bills.length; i++) {
+//   tips.push(calcTip(bills[i]));
+//   totals.push(bills[i] + tips[i]);
+// }
+
+// console.log(tips, totals);
+
+//CHALLENGE 9
+
+const temps = [9, 7, 5, 3, 6, "error", 9, 10, 13];
+
+const calcTempAmplitude = function (temps) {
+  let max = temps[0];
+  let min = temps[0];
+
+  for (let i = 0; i < temps.length; i++) {
+    if (typeof temps[i] !== "number") continue;
+    if (temps[i] > max) max = temps[i];
+    if (temps[i] < min) min = temps[i];
+  }
+  console.log(min, max);
+  return max - min;
 };
 
-const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
-const tips = [];
-const totals = [];
-
-for (let i = 0; i < bills.length; i++) {
-  tips.push(calcTip(bills[i]));
-  totals.push(bills[i] + tips[i]);
-}
-
-console.log(tips, totals);
+const amplitude = calcTempAmplitude(temps);
+console.log(amplitude);
