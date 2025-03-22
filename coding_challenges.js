@@ -138,17 +138,17 @@
 // const amplitude = calcTempAmplitude(temps);
 // console.log(amplitude);
 
-//CHALLENGE 9
+//CHALLENGE 10
 
-const arr = [14, 21, 30];
+// const arr = [14, 21, 30];
 
-const printForcast = function (arr) {
-  let str = "";
-  for (let i = 0; i < arr.length; i++) {
-    str = str + `... ${arr[i]}°C in ${i + 1} days `;
-  }
-  str = str + "...";
-  console.log(str);
-};
+// const printForcast = function (arr) {
+//   let str = "";
+//   for (let i = 0; i < arr.length; i++) {
+//     str = str + `... ${arr[i]}°C in ${i + 1} days `;
+//   }
+//   str = str + "...";
+//   console.log(str);
+// };
 
-printForcast(arr);
+// printForcast(arr);
