@@ -49,3 +49,7 @@
 // friends.push("d");
 // console.log(friends);
 // console.log(friends.length);
+
+//scope and the scope chain.
+//var doesn't have block scope, only have function scope and global scope.
+// let and const have block scope as well.
