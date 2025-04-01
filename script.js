@@ -86,5 +86,27 @@ function calcAge(birthYear) {
 
 const firstName = "Midhun";
 calcAge(2000);
+*/
+
+// hoisting in practice
+/*
+console.log(a); // undefined
+console.log(b); // error
+console.log(c); // error
+
+var a = 10;
+const b = 20;
+let c = 30;
+
+console.log(add(3, 2)); // works
+console.log(addExpr(a, b)); // error for const and let
+
+function add(a, b) {
+  return a + b;
+}
+
+const addExpr = function (a, b) {
+  return a + b;
+};
 
 */
