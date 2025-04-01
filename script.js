@@ -53,3 +53,38 @@
 //scope and the scope chain.
 //var doesn't have block scope, only have function scope and global scope.
 // let and const have block scope as well.
+
+//scoping in practice
+/*
+function calcAge(birthYear) {
+  const age = 2037 - birthYear;
+  console.log(firstName);
+
+  function printAge() {
+    const output = `you are ${age}, born in ${birthYear}`;
+    console.log(output);
+    if (birthYear > 1995) {
+      const a = 10;
+      let b = 20;
+      var c = 30;
+
+      function add(a, b) {
+        return a + b;
+      }
+    }
+    console.log(c); // works bcz var is function scope
+    console.log(add(2, 3)); // works (note: functions are block scoped in strict mode, so will not work on strict mode)
+    console.log(a); // error bcz const and let are block scope
+    console.log(b); // error bcz const and let are block scope
+  }
+  console.log(add(2, 3)); // error
+
+  printAge();
+
+  return age;
+}
+
+const firstName = "Midhun";
+calcAge(2000);
+
+*/
