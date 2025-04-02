@@ -110,3 +110,35 @@ const addExpr = function (a, b) {
 };
 
 */
+
+// this keyword
+"use strict";
+
+console.log(this); // points to window object
+
+const calcAge = function (birthYear) {
+  console.log(2037 - birthYear);
+  console.log(this); //gets undefined
+};
+calcAge(1995);
+
+const calcAgeArrow = (birthYear) => {
+  console.log(2035 - birthYear);
+  console.log(this); // gets window as arrow function doesnt get this keyword
+};
+calcAgeArrow(1995);
+
+const midhun = {
+  year: 2000,
+  calcAge: function () {
+    console.log(this); // gets the midhun object
+    console.log(2037 - this.year);
+  },
+};
+midhun.calcAge();
+
+const matilda = {
+  year: 2005,
+};
+matilda.calcAge = midhun.calcAge; // method borrowing
+matilda.calcAge();
