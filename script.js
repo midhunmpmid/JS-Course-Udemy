@@ -112,6 +112,7 @@ const addExpr = function (a, b) {
 */
 
 // this keyword
+/*
 "use strict";
 
 console.log(this); // points to window object
@@ -142,3 +143,4 @@ const matilda = {
 };
 matilda.calcAge = midhun.calcAge; // method borrowing
 matilda.calcAge();
+*/
