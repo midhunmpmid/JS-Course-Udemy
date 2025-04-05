@@ -166,8 +166,15 @@ jessicaCopy.lastName = "Williams"; // this will only change the new and copied o
 console.log("Before:", jessica);
 console.log("After:", jessicaCopy);
 
-jessicaCopy.family.push("mary");
+jessicaCopy.family.push("mary"); // this will change all the copies of the object as array is also an object and the family key contains the reference to it.
 jessicaCopy.family.push("john");
 
 console.log("Before:", jessica);
 console.log("After:", jessicaCopy);
+
+const jessicaClone = structuredClone(jessica); // solves the problem
+jessicaClone.family.push("Midhun");
+jessicaClone.family.push("Midhun01");
+
+console.log("Org:", jessica);
+console.log("Clone:", jessicaClone);
