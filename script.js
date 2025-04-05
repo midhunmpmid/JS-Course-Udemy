@@ -144,3 +144,30 @@ const matilda = {
 matilda.calcAge = midhun.calcAge; // method borrowing
 matilda.calcAge();
 */
+
+//object references
+
+const jessica = {
+  firstName: "Jessica",
+  lastName: "Davis",
+  age: "27",
+  family: ["Alice", "Bob"],
+};
+
+const marriedJessica = jessica;
+marriedJessica.lastName = "Davis"; // this change will reflect in the original one as the variable jessica is just a reference to the object, not the object itself.
+
+console.log("Before:", jessica);
+console.log("After:", marriedJessica);
+
+const jessicaCopy = { ...jessica };
+jessicaCopy.lastName = "Williams"; // this will only change the new and copied one as the spread operator creates a new object with same properties
+
+console.log("Before:", jessica);
+console.log("After:", jessicaCopy);
+
+jessicaCopy.family.push("mary");
+jessicaCopy.family.push("john");
+
+console.log("Before:", jessica);
+console.log("After:", jessicaCopy);
