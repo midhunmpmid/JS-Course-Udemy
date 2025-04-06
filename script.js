@@ -146,7 +146,7 @@ matilda.calcAge();
 */
 
 //object references
-
+/*
 const jessica = {
   firstName: "Jessica",
   lastName: "Davis",
@@ -178,3 +178,4 @@ jessicaClone.family.push("Midhun01");
 
 console.log("Org:", jessica);
 console.log("Clone:", jessicaClone);
+*/
