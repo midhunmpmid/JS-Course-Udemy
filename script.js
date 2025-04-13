@@ -188,6 +188,10 @@ const restaurant = {
   categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
   starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
   mainMenu: ["Pizza", "Pasta", "Risotto"],
+
+  order: function (starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
 };
 
 const [x, y, z] = restaurant.categories; // variables x,y,z gets teh values "Italian", "Pizzeria", "Vegetarian"
@@ -198,3 +202,14 @@ console.log(a, b, c);
 
 [a, b] = [b, a]; // swapping of values
 console.log(a, b);
+
+const [starter, main] = restaurant.order(1, 2); //returning two values from a function
+console.log(starter, main);
+
+const nested = [2, 4, [5, 6]];
+const [i, , [j, k]] = nested; // gets 2,5,6 to i,j,k respectively
+console.log(i, j, k);
+
+const nestedTwo = [2, 4, [5, 6]];
+const [, , [q, w]] = nestedTwo; // gets 5,6 to q,w respectively
+console.log(q, w);
