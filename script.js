@@ -181,7 +181,7 @@ console.log("Clone:", jessicaClone);
 */
 
 // Destructuring arrays
-/*
+
 const restaurant = {
   name: "Classico Italiano",
   location: "Via Angelo Tavanti 23, Firenze, Italy",
@@ -189,4 +189,12 @@ const restaurant = {
   starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
   mainMenu: ["Pizza", "Pasta", "Risotto"],
 };
-*/
+
+const [x, y, z] = restaurant.categories; // variables x,y,z gets teh values "Italian", "Pizzeria", "Vegetarian"
+console.log(x, y, z);
+
+let [a, b, , c] = restaurant.categories; // third values is skipped
+console.log(a, b, c);
+
+[a, b] = [b, a]; // swapping of values
+console.log(a, b);
