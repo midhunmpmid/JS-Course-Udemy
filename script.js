@@ -213,3 +213,9 @@ console.log(i, j, k);
 const nestedTwo = [2, 4, [5, 6]];
 const [, , [q, w]] = nestedTwo; // gets 5,6 to q,w respectively
 console.log(q, w);
+
+[s, d, f] = [1, 2]; // f becomes undefined
+console.log(s, d, f);
+
+[v = 0, n = 0, m = 0] = [1, 2]; //variable m gets the deafult value of 0
+console.log(v, n, m);
