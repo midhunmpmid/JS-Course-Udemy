@@ -181,7 +181,7 @@ console.log("Clone:", jessicaClone);
 */
 
 // Destructuring arrays
-
+/*
 const restaurant = {
   name: "Classico Italiano",
   location: "Via Angelo Tavanti 23, Firenze, Italy",
@@ -219,3 +219,57 @@ console.log(s, d, f);
 
 [v = 0, n = 0, m = 0] = [1, 2]; //variable m gets the deafult value of 0
 console.log(v, n, m);
+
+*/
+
+//Destructuring objects
+
+const restaurant = {
+  name: "Classico Italiano",
+  location: "Via Angelo Tavanti 23, Firenze, Italy",
+  categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
+  starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
+  mainMenu: ["Pizza", "Pasta", "Risotto"],
+
+  openingHours: {
+    thu: {
+      open: 12,
+      close: 22,
+    },
+    fri: {
+      open: 11,
+      close: 23,
+    },
+    sat: {
+      open: 0,
+      close: 24,
+    },
+  },
+
+  order: function (starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
+};
+
+console.log(restaurant.openingHours.thu.open); //output 12
+
+const { name, openingHours, categories } = restaurant; // variables gets the corresponding values
+console.log(name, openingHours, categories);
+
+const {
+  name: restaurantName,
+  openingHours: hours,
+  categories: tags,
+} = restaurant; // if you need diffrent variable names
+console.log(restaurantName, hours, tags);
+
+// default values
+const { menu = [], starterMenu: starters = [] } = restaurant; // if menu is not found will give us an empty array
+console.log(menu, starters);
+
+//mutating variables
+let a = 111;
+let b = 999;
+const obj = { a: 23, b: 7, c: 14 };
+({ a, b } = obj);
+console.log(a, b);
