@@ -287,7 +287,7 @@ console.log(o, c);
 */
 
 // destructuring objects: Practical example
-
+/*
 const restaurant = {
   name: "Classico Italiano",
   location: "Via Angelo Tavanti 23, Firenze, Italy",
@@ -314,7 +314,12 @@ const restaurant = {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
 
-  orderDelivery: function ({ starterIndex, mainIndex, time, address }) {
+  orderDelivery: function ({
+    starterIndex = 1,
+    mainIndex = 1,
+    time = "22: 00",
+    address = "WER TIQ", // if no data passed through function call then default values used
+  }) {
     console.log(
       `Order recieved! ${this.starterMenu[starterIndex]}
       and ${this.mainMenu[mainIndex]}
@@ -329,3 +334,6 @@ restaurant.orderDelivery({
   mainIndex: 2,
   starterIndex: 2,
 });
+
+restaurant.orderDelivery({ time: "10:30" }); // here default values will be used for other properties except for time
+*/
