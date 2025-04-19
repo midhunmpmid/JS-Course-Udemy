@@ -460,3 +460,38 @@ for (const item of menu.entries()) console.log(`${item[0] + 1}: ${item[1]}`); //
 
 for (const [i, el] of menu.entries()) console.log(`${i + 1}: ${el}`); // better way
 */
+
+/////////////////////////////////////////
+// Working with strings
+/*
+const airline = "TAP Air Portugal";
+const plane = "A320";
+
+console.log(airline.indexOf("r"));
+console.log(airline.lastIndexOf("r"));
+console.log(airline.indexOf("Portugal"));
+
+console.log(airline.slice(4));
+console.log(airline.slice(4, 7));
+console.log(airline.slice(0, airline.indexOf(" ")));
+
+console.log(airline.slice(-2));
+
+const email = " Hello@midhun.Io \n";
+const normalizedEmail = email.toLowerCase().trim();
+console.log(normalizedEmail);
+
+console.log("a+very+nice+string".split("+"));
+const newName = ["Mr.", "Midhun", "M."].join(" ");
+console.log(newName);
+
+const maskCreditCard = function (number) {
+  const str = number + ""; // to convert into a string
+  const last = str.slice(-4);
+  return last.padStart(str.length, "*");
+};
+
+console.log(maskCreditCard(12345678));
+console.log(maskCreditCard(12345678232));
+console.log(maskCreditCard("123456789"));
+*/
