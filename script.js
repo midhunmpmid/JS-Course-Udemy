@@ -54,6 +54,7 @@
 //var doesn't have block scope, only have function scope and global scope.
 // let and const have block scope as well.
 
+/////////////////////////////////////////
 //scoping in practice
 /*
 function calcAge(birthYear) {
@@ -88,6 +89,7 @@ const firstName = "Midhun";
 calcAge(2000);
 */
 
+/////////////////////////////////////////
 // hoisting in practice
 /*
 console.log(a); // undefined
@@ -111,6 +113,7 @@ const addExpr = function (a, b) {
 
 */
 
+/////////////////////////////////////////
 // this keyword
 /*
 "use strict";
@@ -145,6 +148,7 @@ matilda.calcAge = midhun.calcAge; // method borrowing
 matilda.calcAge();
 */
 
+/////////////////////////////////////////
 //object references
 /*
 const jessica = {
@@ -180,6 +184,7 @@ console.log("Org:", jessica);
 console.log("Clone:", jessicaClone);
 */
 
+/////////////////////////////////////////
 // Destructuring arrays
 /*
 const restaurant = {
@@ -222,6 +227,7 @@ console.log(v, n, m);
 
 */
 
+/////////////////////////////////////////
 //Destructuring objects
 /*
 const restaurant = {
@@ -338,6 +344,7 @@ restaurant.orderDelivery({
 restaurant.orderDelivery({ time: "10:30" }); // here default values will be used for other properties except for time
 */
 
+/////////////////////////////////////////
 // spread operator
 /*
 const arr = [7, 8, 9];
@@ -378,4 +385,58 @@ const restaurantCopy = { ...restaurant }; // makes a real copy
 restaurantCopy.name = "Ristorente Roma"; // the chnage in restaurantCopy will not reflect in resturant
 console.log(restaurantCopy.name);
 console.log(restaurant.name);
+*/
+
+/////////////////////////////////////////
+// Rest pattern
+/*
+const arr = [1, 2, ...[3, 4]]; // SPREAD, becuase on right side of =
+
+const [a, b, ...others] = [1, 2, 3, 4, 5]; // REST, becuase on left side of =
+console.log(a, b, others);
+
+const restaurant = {
+  name: "Classico Italiano",
+  location: "Via Angelo Tavanti 23, Firenze, Italy",
+  categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
+  starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
+  mainMenu: ["Pizza", "Pasta", "Risotto"],
+
+  openingHours: {
+    thu: {
+      open: 12,
+      close: 22,
+    },
+    fri: {
+      open: 11,
+      close: 23,
+    },
+    sat: {
+      open: 0,
+      close: 24,
+    },
+  },
+};
+
+const [pizza, , risotto, ...otherFood] = [
+  ...restaurant.mainMenu,
+  ...restaurant.starterMenu,
+]; // otherfood gets rest of the items in the array, and REST (...) should always be the last element
+console.log(pizza, risotto, otherFood);
+
+//objects
+const { sat, ...weekdays } = restaurant.openingHours;
+console.log(weekdays);
+
+//funtions
+const add = function (...numbers) {
+  console.log(numbers);
+};
+
+add(2, 3);
+add(1, 2, 3, 4);
+add(3, 4, 5, 6, 7, 8);
+
+const x = [23, 5, 7];
+add(...x);
 */
