@@ -337,3 +337,45 @@ restaurant.orderDelivery({
 
 restaurant.orderDelivery({ time: "10:30" }); // here default values will be used for other properties except for time
 */
+
+// spread operator
+/*
+const arr = [7, 8, 9];
+const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
+console.log(badNewArr);
+
+const newArr = [1, 2, ...arr];
+console.log(newArr);
+
+console.log(...newArr); // logs elements individually
+
+const restaurant = {
+  name: "Classico Italiano",
+  location: "Via Angelo Tavanti 23, Firenze, Italy",
+  categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
+  starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
+  mainMenu: ["Pizza", "Pasta", "Risotto"],
+};
+const newMenu = [...restaurant.mainMenu, "Cheeseballs"];
+console.log(newMenu);
+
+const mainMenuCopy = [...restaurant.mainMenu]; //copy array
+
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu]; // join 2 arrays
+console.log(menu);
+
+// Iterables: arrays, strings, maps, sets. NOT objects
+const str = "Midhun";
+const letters = [...str, "", "M."];
+console.log(letters);
+console.log(...str);
+
+//objects
+const newRestaurant = { foundedIn: 1998, ...restaurant }; // this will copy restuarant object with the new added properties to newRestuarant
+console.log(newRestaurant);
+
+const restaurantCopy = { ...restaurant }; // makes a real copy
+restaurantCopy.name = "Ristorente Roma"; // the chnage in restaurantCopy will not reflect in resturant
+console.log(restaurantCopy.name);
+console.log(restaurant.name);
+*/
