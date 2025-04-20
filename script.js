@@ -495,3 +495,23 @@ console.log(maskCreditCard(12345678));
 console.log(maskCreditCard(12345678232));
 console.log(maskCreditCard("123456789"));
 */
+
+/////////////////////////////////////////
+// A closer look at functions
+
+/*
+JavaScript is always pass-by-value. 
+However, when dealing with objects, arrays, or functions, 
+the value being passed is actually a reference to the object in memory — 
+not the object itself. This can feel like pass-by-reference because 
+changes made to the object inside a function affect the original object. 
+But technically, it’s still pass-by-value 
+because what's passed is a copy of the reference.
+
+For primitive types like numbers, strings, and booleans, 
+changes made inside a function do not affect the original value — 
+because a copy of the actual value is passed.
+
+So in short: JavaScript does not have true pass-by-reference, 
+but references to objects can be passed by value.
+*/
