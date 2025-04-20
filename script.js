@@ -516,6 +516,7 @@ So in short: JavaScript does not have true pass-by-reference,
 but references to objects can be passed by value.
 */
 
+/*
 // callback functions
 const oneWord = function (str) {
   return str.replace(/ /g, "").toLowerCase();
@@ -586,12 +587,11 @@ console.log(addVAT(100));
 console.log(addVAT(23));
 
 // closure
-
+*/
 /*
 A closure allows a function to 
 access variables from its outer function 
 even after the outer function has finished running.
-*/
 
 const secureBooking = function () {
   let passengerCount = 0;
@@ -609,3 +609,4 @@ booker();
 booker();
 
 console.dir(booker);
+*/
