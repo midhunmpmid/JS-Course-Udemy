@@ -555,3 +555,22 @@ greet("Hello")("Midhun");
 
 const greetArr = (greeting) => (name) => console.log(`${greeting} ${name}`);
 greetArr("HelloArr")("Midhun");
+
+// bind method
+
+const lufthansa = {
+  planeCode: "LF45",
+};
+
+lufthansa.planes = 300;
+lufthansa.buyPlane = function () {
+  console.log(this);
+
+  this.planes++;
+  console.log(this.planes);
+};
+
+document.querySelector(".btn").addEventListener("click", lufthansa.buyPlane); //in this line, the THIS keayword will point to '.btn'
+document
+  .querySelector(".btn")
+  .addEventListener("click", lufthansa.buyPlane.bind(lufthansa)); // here problem solved with bind method as we are passing the object reference
