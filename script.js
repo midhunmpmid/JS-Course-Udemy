@@ -536,3 +536,22 @@ const transformer = function (str, fn) {
 
 transformer("JavaScript is the best!", upperFirstWord);
 transformer("JavaScript is the best!", oneWord);
+
+//functions returning functions
+
+const greet = function (greeting) {
+  return function (name) {
+    console.log(`${greeting} ${name}`);
+  };
+};
+
+const greeterHey = greet("Hey");
+greeterHey("Midhun");
+greeterHey("Steven");
+
+greet("Hello")("Midhun");
+
+//trying the same above with arrow functions
+
+const greetArr = (greeting) => (name) => console.log(`${greeting} ${name}`);
+greetArr("HelloArr")("Midhun");
