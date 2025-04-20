@@ -574,3 +574,38 @@ document.querySelector(".btn").addEventListener("click", lufthansa.buyPlane); //
 document
   .querySelector(".btn")
   .addEventListener("click", lufthansa.buyPlane.bind(lufthansa)); // here problem solved with bind method as we are passing the object reference
+
+// example for bind
+
+const addTax = (rate, value) => value + value * rate;
+console.log(addTax(0.1, 200));
+
+const addVAT = addTax.bind(null, 0.23); // created an another useful function from the above function
+
+console.log(addVAT(100));
+console.log(addVAT(23));
+
+// closure
+
+/*
+A closure allows a function to 
+access variables from its outer function 
+even after the outer function has finished running.
+*/
+
+const secureBooking = function () {
+  let passengerCount = 0;
+
+  return function () {
+    passengerCount++;
+    console.log(`${passengerCount} passengers`);
+  };
+};
+
+const booker = secureBooking();
+
+booker(); // here the booker function have access to passengerCount variable even after the execution of secureBooking()
+booker();
+booker();
+
+console.dir(booker);
