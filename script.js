@@ -638,3 +638,49 @@ console.log(arrTwo[0]);
 console.log(arrTwo.at(0));
 console.log(arrTwo.at(-1)); // usefull for getting the last element as value
 */
+
+// forEach
+/*
+const transactions = [200, 450, -400, 3000, -650, -130];
+
+for (const transaction of transactions) {
+  if (transaction > 0) {
+    console.log(`You deposited ${transaction}`);
+  } else {
+    console.log(`You withdrew ${Math.abs(transaction)}`);
+  }
+}
+
+console.log("----------forEach----------");
+
+transactions.forEach(function (transaction) {
+  if (transaction > 0) {
+    console.log(`You deposited ${transaction}`);
+  } else {
+    console.log(`You withdrew ${Math.abs(transaction)}`);
+  }
+});
+
+// if we need indexes as counter variables
+console.log("----------with index as counter----------");
+
+for (const [i, transaction] of transactions.entries()) {
+  // index first (i)
+  if (transaction > 0) {
+    console.log(`Transaction ${i + 1}: You deposited ${transaction}`);
+  } else {
+    console.log(`Transaction ${i + 1}: You withdrew ${Math.abs(transaction)}`);
+  }
+}
+
+console.log("----------forEach----------");
+
+transactions.forEach(function (transaction, i) {
+  // array element first and then index (it passes array as well)
+  if (transaction > 0) {
+    console.log(`Transaction ${i + 1}: You deposited ${transaction}`);
+  } else {
+    console.log(`Transaction ${i + 1}: You withdrew ${Math.abs(transaction)}`);
+  }
+});
+*/
