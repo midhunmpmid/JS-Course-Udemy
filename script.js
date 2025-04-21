@@ -610,3 +610,31 @@ booker();
 
 console.dir(booker);
 */
+
+/////////////////////////////////////////
+// Working with arrays
+/*
+//array methods
+let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log(arr.slice(2)); // doesn't mutate the original array
+console.log(arr.slice(2, 5));
+console.log(arr.slice(-1));
+console.log(arr.slice(1, -2));
+
+console.log(arr.splice(2)); // mutates the original array
+console.log(arr.splice(-1));
+console.log(arr.splice(2, 2));
+console.log(arr);
+
+const arrTwo = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log(arrTwo.reverse()); // mutates teh original array
+console.log(arrTwo);
+
+const numbers = arr.concat(arrTwo); // mutates the original array
+console.log(numbers);
+console.log([...arr, ...arrTwo]); // gives same result without mutating
+
+console.log(arrTwo[0]);
+console.log(arrTwo.at(0));
+console.log(arrTwo.at(-1)); // usefull for getting the last element as value
+*/
