@@ -683,7 +683,7 @@ transactions.forEach(function (transaction, i) {
     console.log(`Transaction ${i + 1}: You withdrew ${Math.abs(transaction)}`);
   }
 });
-*/
+
 
 // the map method
 const movements = [5000, 3400, -150, -790, -3210, -1000, 8500, -30];
@@ -691,3 +691,4 @@ const eurToUsd = 1.1;
 
 const movementsUSD = movements.map((mov) => mov * eurToUsd); // creates a new array based on the condition
 console.log(movementsUSD);
+*/
