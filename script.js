@@ -684,7 +684,7 @@ transactions.forEach(function (transaction, i) {
   }
 });
 
-*/
+
 // the map method
 const movements = [5000, 3400, -150, -790, -3210, -1000, 8500, -30];
 const eurToUsd = 1.1;
@@ -701,3 +701,17 @@ console.log(deposits);
 
 const withdrawals = movements.filter((mov) => mov < 0);
 console.log(withdrawals);
+
+// reduce method
+const movements2 = [10, 20, -30, 40];
+
+const balance = movements2.reduce(function (accumulator, cur, i, arr) {
+  console.log(`Iteration ${i}: ${accumulator}`);
+  return accumulator + cur;
+}, 0); // accumulator is like a snowball, keeps adding up. the 0 at the end is intial value of the accumulator
+
+console.log(balance);
+
+const balance2 = movements2.reduce((acc, cur) => acc + cur, 0);
+console.log(balance2);
+*/
