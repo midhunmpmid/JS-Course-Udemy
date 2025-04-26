@@ -714,4 +714,11 @@ console.log(balance);
 
 const balance2 = movements2.reduce((acc, cur) => acc + cur, 0);
 console.log(balance2);
+
+// finding max value
+const max = movements2.reduce((acc, mov) => {
+  if (acc > mov) return acc;
+  else return mov;
+}, movements2[0]);
+console.log(max);
 */
