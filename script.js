@@ -684,11 +684,20 @@ transactions.forEach(function (transaction, i) {
   }
 });
 
-
+*/
 // the map method
 const movements = [5000, 3400, -150, -790, -3210, -1000, 8500, -30];
 const eurToUsd = 1.1;
 
 const movementsUSD = movements.map((mov) => mov * eurToUsd); // creates a new array based on the condition
 console.log(movementsUSD);
-*/
+
+// filter method
+
+const deposits = movements.filter(function (mov) {
+  return mov > 0;
+});
+console.log(deposits);
+
+const withdrawals = movements.filter((mov) => mov < 0);
+console.log(withdrawals);
