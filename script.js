@@ -701,7 +701,7 @@ console.log(deposits);
 
 const withdrawals = movements.filter((mov) => mov < 0);
 console.log(withdrawals);
-
+*/
 // reduce method
 const movements2 = [10, 20, -30, 40];
 
@@ -721,4 +721,8 @@ const max = movements2.reduce((acc, mov) => {
   else return mov;
 }, movements2[0]);
 console.log(max);
-*/
+
+//find method
+const firstWithdrawal = movements2.find((mov) => mov < 0); // find method returns the first element which satisfies the provided condition
+console.log(movements2);
+console.log(firstWithdrawal);
