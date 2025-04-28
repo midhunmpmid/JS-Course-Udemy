@@ -722,7 +722,16 @@ const max = movements2.reduce((acc, mov) => {
 }, movements2[0]);
 console.log(max);
 
-//find method
+// find method
 const firstWithdrawal = movements2.find((mov) => mov < 0); // find method returns the first element which satisfies the provided condition
 console.log(movements2);
 console.log(firstWithdrawal);
+
+// includes method
+console.log(movements2);
+console.log(movements2.includes(20)); //equality
+
+// some method
+console.log("--------some method---------");
+const anyDeposits = movements2.some((mov) => mov > 0); //condition
+console.log(anyDeposits);
