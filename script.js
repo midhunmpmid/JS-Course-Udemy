@@ -734,5 +734,30 @@ console.log(movements2.includes(20)); //equality
 // some method
 console.log("--------some method---------");
 const anyDeposits = movements2.some((mov) => mov > 0); //condition
-console.log(anyDeposits);
+console.log(anyDeposits); //returns true if any of the element satisfy the condition
+
+// every method
+console.log("--------every method---------");
+console.log(movements2.every((mov) => mov > 0)); // returns true if all of the array elemets satisfy the condition
+
+//separate callback
+const deposit = (mov) => mov > 0;
+console.log(movements2.some(deposit));
+console.log(movements2.every(deposit));
+console.log(movements2.filter(deposit));
+*/
+/*
+// sort method
+const movements3 = [-650, -400, -130, 70, 200, 450, 1300, 3000];
+console.log(movements3.sort()); // sorting happens as strings
+
+movements3.sort((a, b) => {
+  if (a > b) return 1; // switch order
+  if (a < b) return -1; //keeps order
+});
+console.log(movements3);
+
+movements3.sort((a, b) => a - b); // gives you the same result
+//we are actually returning the result of a-b, if its positive number it switches order
+console.log(movements3);
 */
