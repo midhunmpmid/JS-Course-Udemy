@@ -701,7 +701,7 @@ console.log(deposits);
 
 const withdrawals = movements.filter((mov) => mov < 0);
 console.log(withdrawals);
-*/
+
 // reduce method
 const movements2 = [10, 20, -30, 40];
 
@@ -735,3 +735,4 @@ console.log(movements2.includes(20)); //equality
 console.log("--------some method---------");
 const anyDeposits = movements2.some((mov) => mov > 0); //condition
 console.log(anyDeposits);
+*/
