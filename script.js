@@ -760,4 +760,11 @@ console.log(movements3);
 movements3.sort((a, b) => a - b); // gives you the same result
 //we are actually returning the result of a-b, if its positive number it switches order
 console.log(movements3);
+
+// array grouping
+console.log(movements3);
+const groupedMovements = Object.groupBy(movements3, (movement) =>
+  movement > 0 ? "deposits" : "withdrawals"
+);
+console.log(groupedMovements);
 */
