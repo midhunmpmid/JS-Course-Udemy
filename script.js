@@ -768,3 +768,14 @@ const groupedMovements = Object.groupBy(movements3, (movement) =>
 );
 console.log(groupedMovements);
 */
+/*
+// empty arrays + fill method
+const x = new Array(7); // will create a new empty array of size 7
+console.log(x);
+x.fill(1, 3, 5);
+console.log(x);
+
+//Array.from
+const z = Array.from({ length: 7 }, (_, i) => i + 1);
+console.log(z);
+*/
