@@ -134,10 +134,10 @@ const updateUi = function (acc) {
 //login event handler
 let currentAccount;
 
-// fake always logged in
-currentAccount = account1;
-updateUi(currentAccount);
-containerApp.style.opacity = 100;
+// // fake always logged in
+// currentAccount = account1;
+// updateUi(currentAccount);
+// containerApp.style.opacity = 100;
 
 btnLogin.addEventListener('click', function (e) {
   e.preventDefault(); // prevent from submitting (prevent reloading the page)
@@ -154,6 +154,15 @@ btnLogin.addEventListener('click', function (e) {
       currentAccount.owner.split(' ')[0]
     }`;
     containerApp.style.opacity = 1;
+
+    // current date and time
+    const now = new Date();
+    const day = `${now.getDate()}`.padStart(2, 0); // padstart to make it always 2 didgits
+    const month = `${now.getMonth() + 1}`.padStart(2, 0); // +1 because its zero based
+    const year = now.getFullYear();
+    const hour = `${now.getHours()}`.padStart(2, 0);
+    const min = `${now.getMinutes()}`.padStart(2, 0);
+    labelDate.textContent = `${day}/${month}/${year}, ${hour}:${min}`;
 
     //clear input fields
     inputLoginUsername.value = inputLoginPin.value = '';
