@@ -134,7 +134,7 @@ const updateUi = function (acc) {
 //login event handler
 let currentAccount;
 
-// // fake always logged in
+// fake always logged in
 // currentAccount = account1;
 // updateUi(currentAccount);
 // containerApp.style.opacity = 100;
@@ -156,6 +156,7 @@ btnLogin.addEventListener('click', function (e) {
     containerApp.style.opacity = 1;
 
     // current date and time
+    /*
     const now = new Date();
     const day = `${now.getDate()}`.padStart(2, 0); // padstart to make it always 2 didgits
     const month = `${now.getMonth() + 1}`.padStart(2, 0); // +1 because its zero based
@@ -163,6 +164,23 @@ btnLogin.addEventListener('click', function (e) {
     const hour = `${now.getHours()}`.padStart(2, 0);
     const min = `${now.getMinutes()}`.padStart(2, 0);
     labelDate.textContent = `${day}/${month}/${year}, ${hour}:${min}`;
+    */
+    // replacing the above with Intl API
+    const now = new Date();
+    const options = {
+      hour: 'numeric',
+      minute: 'numeric',
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric',
+      weekday: 'long',
+    };
+    const locale = navigator.language; // gets language  formatting from the browser
+    // console.log(locale);
+
+    labelDate.textContent = new Intl.DateTimeFormat(locale, options).format(
+      now
+    );
 
     //clear input fields
     inputLoginUsername.value = inputLoginPin.value = '';
