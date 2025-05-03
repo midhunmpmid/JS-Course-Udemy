@@ -222,10 +222,12 @@ btnLoan.addEventListener('click', function (e) {
   const amount = +inputLoanAmount.value;
   if (amount > 0 && currentAccount.movements.some(mov => mov >= amount * 0.1)) {
     // add movement
-    currentAccount.movements.push(amount);
+    setTimeout(function () {
+      currentAccount.movements.push(amount);
 
-    //update UI
-    updateUi(currentAccount);
+      //update UI
+      updateUi(currentAccount);
+    }, 5000);
   }
   inputLoanAmount.value = '';
 });
