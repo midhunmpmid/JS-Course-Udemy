@@ -779,3 +779,7 @@ console.log(x);
 const z = Array.from({ length: 7 }, (_, i) => i + 1);
 console.log(z);
 */
+
+// date
+const now = new Date();
+console.log(now);

@@ -134,6 +134,11 @@ const updateUi = function (acc) {
 //login event handler
 let currentAccount;
 
+// fake always logged in
+currentAccount = account1;
+updateUi(currentAccount);
+containerApp.style.opacity = 100;
+
 btnLogin.addEventListener('click', function (e) {
   e.preventDefault(); // prevent from submitting (prevent reloading the page)
 
