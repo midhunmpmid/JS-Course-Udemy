@@ -798,7 +798,6 @@ setInterval(function () {
 const header = document.querySelector(".header");
 const message = document.createElement("div");
 message.classList.add("cookie-message");
-// message.textContent = "We use Cookies.";
 
 message.innerHTML = "We use cookies. <button>Got it.</button>";
 header.prepend(message);

@@ -33,3 +33,11 @@ document.addEventListener('keydown', function (e) {
     closeModal();
   }
 });
+
+const header = document.querySelector('.header');
+const message = document.createElement('div');
+message.classList.add('cookie-message');
+
+message.innerHTML =
+  'We use cookies. <button class="btn btn--close--cookie">Got it.</button>';
+header.prepend(message);
