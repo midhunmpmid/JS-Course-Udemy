@@ -52,3 +52,18 @@ document
 
 message.style.backgroundColor = '#37383d';
 message.style.width = '120%';
+
+//scroll animation
+const btnScrollTo = document.querySelector('.btn--scroll-to');
+const section1 = document.querySelector('#section--1');
+
+btnScrollTo.addEventListener('click', function (e) {
+  section1.scrollIntoView({ behavior: 'smooth' });
+});
+
+const operations = document.querySelector('[href="#section"]');
+console.log(operations);
+const section2 = document.querySelector('#section--2');
+operations.addEventListener('click', function () {
+  section2.scrollIntoView({ behavior: 'smooth' });
+});
