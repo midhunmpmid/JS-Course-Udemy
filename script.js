@@ -801,3 +801,38 @@ message.classList.add("cookie-message");
 
 message.innerHTML = "We use cookies. <button>Got it.</button>";
 header.prepend(message);
+
+//deleting elements
+
+document
+  .querySelector(".btn--close--cookie")
+  .addEventListener("click", function () {
+    message.remove();
+  });
+
+//styles
+
+message.style.backgroundColor = "#37383d";
+message.style.width = "120%";
+
+console.log(message.style.color);
+console.log(message.style.backgroundColor);
+
+console.log(getComputedStyle(message).color);
+console.log(getComputedStyle(message).height);
+
+message.style.height =
+  Number.parseFloat(getComputedStyle(message).height) + 30 + "px";
+
+//attributes
+
+const logo = document.querySelector(".nav__logo");
+console.log(logo.alt);
+console.log(logo.src);
+console.log(logo.className);
+
+//classes
+logo.classList.add("class");
+logo.classList.remove("class");
+logo.classList.toggle("class");
+logo.classList.contains("class");

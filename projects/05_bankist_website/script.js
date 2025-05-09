@@ -34,6 +34,7 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
+//cookie message
 const header = document.querySelector('.header');
 const message = document.createElement('div');
 message.classList.add('cookie-message');
@@ -41,3 +42,13 @@ message.classList.add('cookie-message');
 message.innerHTML =
   'We use cookies. <button class="btn btn--close--cookie">Got it.</button>';
 header.prepend(message);
+header.before(message);
+
+document
+  .querySelector('.btn--close--cookie')
+  .addEventListener('click', function () {
+    message.remove();
+  });
+
+message.style.backgroundColor = '#37383d';
+message.style.width = '120%';
