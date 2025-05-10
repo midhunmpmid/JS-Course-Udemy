@@ -51,7 +51,7 @@ document
   });
 
 message.style.backgroundColor = '#37383d';
-message.style.width = '120%';
+message.style.width = '100%';
 
 //scroll animation
 const btnScrollTo = document.querySelector('.btn--scroll-to');
@@ -61,9 +61,21 @@ btnScrollTo.addEventListener('click', function (e) {
   section1.scrollIntoView({ behavior: 'smooth' });
 });
 
-const operations = document.querySelector('[href="#section"]');
-console.log(operations);
-const section2 = document.querySelector('#section--2');
-operations.addEventListener('click', function () {
-  section2.scrollIntoView({ behavior: 'smooth' });
+//page navigation
+
+// 1. add event listner to common parent element
+// 2. determine what element originated the event
+
+document.querySelector('.nav__links').addEventListener('click', function (e) {
+  e.preventDefault();
+
+  //matching strategy
+  if (e.target.classList.contains('nav__link')) {
+    const id = e.target.getAttribute('href');
+    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+  }
 });
+
+//important method
+// const h1 = document.querySelector('h1');
+// h1.closest('.header').style.background = 'var(--gradient-secondary)';
