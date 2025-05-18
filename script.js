@@ -838,3 +838,6 @@ setInterval(function () {
 // logo.classList.contains("class");
 
 ///////////////// OOPS//////////////////////////
+
+// A class is a blueprint for creating objects with specific properties and methods.
+// An instance is an object created from a class using the new keyword.
