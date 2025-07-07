@@ -862,3 +862,11 @@ Person.prototype.calcAge = function () {
   console.log(2037 - this.birthYear);
 };
 jonas.calcAge();
+
+//adding a new methode to the prototype of an array
+
+Array.prototype.unique = function () {
+  return [...new Set(this)];
+};
+
+console.log(Array.unique());
