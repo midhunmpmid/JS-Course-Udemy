@@ -864,9 +864,27 @@ Person.prototype.calcAge = function () {
 jonas.calcAge();
 
 //adding a new methode to the prototype of an array
+// not good to do this wehen youre working in a team
 
 Array.prototype.unique = function () {
   return [...new Set(this)];
 };
 
 console.log(Array.unique());
+
+//classes
+class PersonCl {
+  constructor(firstName, birthYear) {
+    this.firstName = firstName;
+    this.birthYear = birthYear;
+  }
+
+  //methods will be added to .prototype property
+  calcAge() {
+    console.log(2037 - this.birthYear);
+  }
+}
+
+const jessica = new PersonCl("Jessica", 1996);
+console.log(jessica);
+jessica.calcAge();
