@@ -888,3 +888,13 @@ class PersonCl {
 const jessica = new PersonCl("Jessica", 1996);
 console.log(jessica);
 jessica.calcAge();
+
+//object.create
+const PersonProto = {
+  calcAge() {
+    console.log(2037 - this.birthYear);
+  },
+};
+
+const teven = Object.create(PersonProto);
+console.log(steven);
