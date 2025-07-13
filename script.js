@@ -898,3 +898,11 @@ const PersonProto = {
 
 const teven = Object.create(PersonProto);
 console.log(steven);
+
+//classes
+class CarCl {
+  constructor(make, speed) {
+    this.make = make;
+    this.speed = speed;
+  }
+}
